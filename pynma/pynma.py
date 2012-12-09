@@ -4,7 +4,7 @@ from xml.dom.minidom import parseString
 from httplib import HTTPSConnection
 from urllib import urlencode
 
-__version__ = "0.1"
+__version__ = "1.0"
 
 API_SERVER = 'www.notifymyandroid.com'
 ADD_PATH   = '/publicapi/notify'
