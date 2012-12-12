@@ -12,9 +12,9 @@ try:
 except ImportError:
         from urllib import urlencode
 
-__version__ = "0.1"
+__version__ = "1.0"
 
-API_SERVER = 'nma.usk.bz'
+API_SERVER = 'www.notifymyandroid.com'
 ADD_PATH   = '/publicapi/notify'
 
 USER_AGENT="PyNMA/v%s"%__version__
@@ -76,7 +76,7 @@ takes 5 arguments:
  - (req) description: description      [10000]
  - (opt) url:         url              [512]
  - (opt) priority:    from -2 (lowest) to 2 (highest) (def:0)
- - (opt) batch_mode:  call API 5 by 5 (def:False)
+ - (opt) batch_mode:  push to all keys at once (def:False)
 
 Warning: using batch_mode will return error only if all API keys are bad
  cf: http://nma.usk.bz/api.php
@@ -102,10 +102,9 @@ Warning: using batch_mode will return error only if all API keys are bad
                 res = self.callapi('POST', ADD_PATH, datas)
                 results[key] = res
         else:
-            for i in range(0, len(self._apikey), 5):
-                datas['apikey'] = ",".join(self._apikey[i:i+5])
-                res = self.callapi('POST', ADD_PATH, datas)
-                results[datas['apikey']] = res
+            datas['apikey'] = ",".join(self._apikey)
+            res = self.callapi('POST', ADD_PATH, datas)
+            results[datas['apikey']] = res
         return results
         
     def callapi(self, method, path, args):
