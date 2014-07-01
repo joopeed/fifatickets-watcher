@@ -1,7 +1,7 @@
 FIFA Tickets monitoring system
 ======
 
-####Credits to: Joao Pedro (github.com/babs)
+####Credits to: Joao Pedro (github.com/joopeed)
 
 ####Thanks to: NotifyMyAndroid API (www.notifymyandroid.com/api.jsp)
 
