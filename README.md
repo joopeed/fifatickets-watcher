@@ -1,14 +1,17 @@
 FIFA Tickets monitoring system
 ======
 
-Credits to: Joao Pedro (github.com/babs)
-Thanks to: NotifyMyAndroid API (www.notifymyandroid.com/api.jsp)
+####Credits to: Joao Pedro (github.com/babs)
+
+####Thanks to: NotifyMyAndroid API (www.notifymyandroid.com/api.jsp)
 
 ### How it works:
-Have a NotifyMyAndroid account, http://www.notifymyandroid.com/, then:
+Have a NotifyMyAndroid account (www.notifymyandroid.com) then:
 Insert your key from NotifyMyAndroid in FIFAmonitor's mykey:
+
     self.mykey = 'saushauhsuahsaushhaushauhsuhas'
 Then, insert the game_code that you want to monitor:
+
     self.game_code  = "57"
 
 ##### Run the app
